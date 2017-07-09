@@ -16,14 +16,13 @@ Class		= require "hump.class"
 Timer		= require "hump.timer"
 Vector		= require "hump.vector"
 
-
-gamestates	= {}
-gamestates['title']		= require "classes.gamestates.title"
-gamestates['ingame']	= require "classes.gamestates.ingame"
+-- Import all of our classes and some utilities
+require "classes"
+require "utils"
 
 function love.load()
 	Gamestate.registerEvents()
-	Gamestate.switch(gamestates.title)
+	Gamestate.switch(gamestates.TitleScreen)
 end
 
 

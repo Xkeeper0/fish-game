@@ -1,21 +1,21 @@
-local title	= {}
+local TitleScreen	= {}
 
 
-function title:update(dt)
+function TitleScreen:update(dt)
 	-- ?
 end
 
 
-function title:draw()
+function TitleScreen:draw()
 	love.graphics.print("Push button to start game", 10, 10)
 end
 
 
-function title:keypressed(key)
+function TitleScreen:keypressed(key)
 	if key == "return" then
-		Gamestate.switch(gamestates.ingame)
+		Gamestate.switch(gamestates.InGame)
 	end
 end
 
 
-return title
+return TitleScreen
