@@ -22,6 +22,7 @@ end
 function InGame:update(dt)
 
 	self.objects.player:update(dt, self)
+	self.objects.lure:update(dt, self)
 	for k, v in pairs(self.objects.fish) do
 		v:update(dt, self)
 	end
@@ -31,6 +32,7 @@ end
 function InGame:draw()
 	love.graphics.print("In game", 10, 10)
 
+	-- Draw a simple background
 	love.graphics.setColor(166, 193, 237)	-- Sky
 	love.graphics.rectangle("fill", 0, 0, GAME_WIDTH, GAME_HEIGHT)
 	love.graphics.setColor(86, 43, 2)	-- Ground
@@ -39,6 +41,9 @@ function InGame:draw()
 	love.graphics.rectangle("fill", 0, WATER_HEIGHT, WATER_WIDTH, WATER_DEPTH - WATER_HEIGHT)
 	love.graphics.setColor(255, 255, 255)	-- Reset
 
+	-- Draw the various objects
+	-- Todo: Probably just write something that can do this
+	-- without having to call specific ones by name?
 	self.objects.player:draw()
 	self.objects.lure:draw()
 	for k, v in pairs(self.objects.fish) do
