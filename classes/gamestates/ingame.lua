@@ -31,6 +31,14 @@ end
 function InGame:draw()
 	love.graphics.print("In game", 10, 10)
 
+	love.graphics.setColor(166, 193, 237)	-- Sky
+	love.graphics.rectangle("fill", 0, 0, GAME_WIDTH, GAME_HEIGHT)
+	love.graphics.setColor(86, 43, 2)	-- Ground
+	love.graphics.rectangle("fill", 0, WATER_HEIGHT, GAME_WIDTH, GAME_HEIGHT - WATER_HEIGHT)
+	love.graphics.setColor(15, 170, 193)	-- Water
+	love.graphics.rectangle("fill", 0, WATER_HEIGHT, WATER_WIDTH, WATER_DEPTH - WATER_HEIGHT)
+	love.graphics.setColor(255, 255, 255)	-- Reset
+
 	self.objects.player:draw()
 	self.objects.lure:draw()
 	for k, v in pairs(self.objects.fish) do
