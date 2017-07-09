@@ -16,6 +16,10 @@ end
 
 
 function Object:update(dt, game)
+	self:doMovement(dt)
+end
+
+function Object:doMovement(dt)
 	self.position	= self.position + self.velocity * dt
 end
 
