@@ -1,6 +1,7 @@
 -- Classes ---------------------------------------
 Object		= require "classes.objects.object"
 Player		= require "classes.objects.player"
+Lure		= require "classes.objects.lure"
 
 
 -- Game States -----------------------------------

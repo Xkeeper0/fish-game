@@ -8,7 +8,6 @@ local Object	= Class{
 
 
 function Object:init(name, position, velocity, direction)
-	print(name, position, velocity, direction)
 	self.name		= defaultArg(name, self.name)
 	self.position	= defaultArg(position, Vector(0, 0))
 	self.velocity	= defaultArg(velocity, Vector(0, 0))

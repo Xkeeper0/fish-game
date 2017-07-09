@@ -20,6 +20,8 @@ Vector		= require "hump.vector"
 require "classes"
 require "utils"
 
+require "defines"
+
 function love.load()
 	Gamestate.registerEvents()
 	Gamestate.switch(gamestates.TitleScreen)

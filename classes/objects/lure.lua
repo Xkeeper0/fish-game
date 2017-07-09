@@ -10,5 +10,11 @@ local Lure	= Class{
 -- if the hook is currently not occupied.
 -- Also should probably handle movement
 
+-- States can either be a mix of individual flags
+-- or perhaps something else (just a text defn.?)
+-- e.g. cast + !inWater = flying through air
+--      hooked + !inWater = "catching"
+-- idk maybe other things.
+
 
 return Lure
