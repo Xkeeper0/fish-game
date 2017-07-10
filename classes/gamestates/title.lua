@@ -1,13 +1,13 @@
 local TitleScreen	= {}
-
+local boring		= .5
 
 function TitleScreen:update(dt)
-	-- ?
+
 end
 
 
 function TitleScreen:draw()
-	love.graphics.print("Push button to start game", 10, 10)
+	love.graphics.print("fish game\n\nsorry\nnot finished\n\npush enter\nuse z/x", 10, 10)
 end
 
 
