@@ -16,11 +16,13 @@ Class		= require "hump.class"
 Timer		= require "hump.timer"
 Vector		= require "hump.vector"
 
+-- Import some definitions
+require "defines"
+
 -- Import all of our classes and some utilities
 require "classes"
 require "utils"
 
-require "defines"
 
 function love.load()
 	Gamestate.registerEvents()
