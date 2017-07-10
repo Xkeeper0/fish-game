@@ -112,9 +112,21 @@ function Lure:reelIn(strength)
 	local tempVector	= self.catchPoint - self.position
 	self.velocity		= (tempVector):trimInplace(strength)
 
-	print(self.catchPoint, self.position, tempVector, self.velocity)
+	if tempVector:len() <= 2 then
+		-- Mark as "caught"
+	end
 end
 
 
+function Lure:draw()
+
+	-- If moving upwards, use the upwards graphic
+	local image		= (self.velocity.y < 0) and Images.Lure.up or Images.Lure.down
+	-- If moving left, flip the graphic
+	local flip	= (self.velocity.x < 0) and -1 or 1
+
+	love.graphics.draw(image, self.position.x, self.position.y, 0, flip, 1, 9, 7)
+
+end
 
 return Lure

@@ -25,6 +25,11 @@ require "defines"
 require "classes"
 require "utils"
 
+-- Holder for important stuff
+Images			= {}
+Sounds			= {}
+
+
 
 function love.load()
 	Gamestate.registerEvents()
@@ -44,6 +49,16 @@ function love.load()
 	love.draw = function(...)
 		drawWrapper(oldDraw, ...)
 	end
+
+		Images.Lure		= {
+			up		= love.graphics.newImage("assets/images/lure-up.png"),
+			down	= love.graphics.newImage("assets/images/lure-down.png"),
+			}
+
+		Images.BigFish	= {
+			normal	= love.graphics.newImage("assets/images/fish-swim.png"),
+			lunge	= love.graphics.newImage("assets/images/fish-lunge.png"),
+			}
 
 end
 
