@@ -8,7 +8,7 @@ function InGame:enter()
 		self.objects.lure		= Lure("L", Vector(WATER_WIDTH + 1, WATER_HEIGHT - 16))
 		self.objects.fish		= {}
 		for i = 1, FISH_COUNT do
-			self.objects.fish[i]	= Object("obj #".. i, Vector(love.math.random(16, WATER_WIDTH - 16), love.math.random(WATER_HEIGHT + 8, WATER_DEPTH - 16)))
+			self.objects.fish[i]	= Fish("Fish #".. i, Vector(love.math.random(16, WATER_WIDTH - 16), love.math.random(WATER_HEIGHT + 8, WATER_DEPTH - 16)))
 		end
 
 		self.entered	= true
