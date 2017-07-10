@@ -1,9 +1,10 @@
 function love.conf(t)
-    t.identity = "fiiiish"
-    t.version = "0.10.1"
+	t.identity		= "fiiiish"
+	t.version		= "0.10.2"
 
-    t.window.title = "fish?"
-    t.window.icon = nil
-    t.window.width = 640
-    t.window.height = 480
+	t.console		= true
+	t.window.title	= "fish?"
+	t.window.icon	= nil
+	t.window.width	= 768
+	t.window.height	= 672
 end
