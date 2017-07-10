@@ -7,7 +7,7 @@ function InGame:enter()
 		self.objects.player		= Player("player", Vector(WATER_WIDTH + 2, WATER_HEIGHT - 16))
 		self.objects.lure		= Lure("L", Vector(WATER_WIDTH + 1, WATER_HEIGHT - 16))
 		self.objects.fish		= {}
-		for i = 0, FISH_COUNT do
+		for i = 1, FISH_COUNT do
 			self.objects.fish[i]	= Object("obj #".. i, Vector(love.math.random(16, WATER_WIDTH - 16), love.math.random(WATER_HEIGHT + 8, WATER_DEPTH - 16)))
 		end
 
@@ -18,7 +18,6 @@ end
 
 -- Update objects.
 -- Passes self (this) to objects so they can ref other objects.
---
 function InGame:update(dt)
 
 	self.objects.player:update(dt, self)
